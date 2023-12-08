@@ -1,0 +1,38 @@
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">Step 2</h5>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="form">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Company Name" formControlName="companyName">
+            </div>
+            <div class="mb-3">
+              <input type="number" class="form-control" placeholder="Number Of Employees" formControlName="numberOfEmployees">
+            </div>
+            <div class="mb-3 row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Domain" formControlName="domain">
+              </div>
+              <div class="col-auto">
+                <button type="button" class="btn btn-light" (click)="addDomain()">+</button>
+              </div>
+            </div>
+          </form>
+          <div class="mb-3">
+            <button type="submit" class="btn btn-primary float-start" (click)="back()">Back</button>
+            <button type="submit" class="btn btn-primary float-end" (click)="submit()">Submit</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<app-message-modal (modalClosed)="back()" #msgModal></app-message-modal>

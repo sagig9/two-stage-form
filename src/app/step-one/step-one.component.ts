@@ -57,6 +57,7 @@ export class StepOneComponent implements OnInit {
       this.sharedDataService.updateSharedData({ ...this.sharedDataService.sharedData$, _personDetails: personDetails });
       this.storageService.saveData("2-step-form", JSON.stringify(personDetails, null, 2));
       this.router.navigate(['/step-two']);
+      //this.router.navigate(['/step-two'], { state: { fromStepOne: true } });
     } else {
 
       this.utilitiesService.showValidationMessage(this.form);

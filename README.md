@@ -1,5 +1,5 @@
 # two-stage-form
 Perform the following steps to execute the project:
-- Clone the repository
+- git clone https://github.com/sagig9/two-stage-form.git
 - npm install
 - ng serve -o

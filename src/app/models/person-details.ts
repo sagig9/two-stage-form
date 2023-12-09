@@ -4,6 +4,6 @@ export class PersonDetails {
   email!: string;
   age!: number;
   companyName!: string;
-  numberOfEmployees!: number;
+  numberOfEmployees: number | null = null; 
   domain: string[] = [];
 }

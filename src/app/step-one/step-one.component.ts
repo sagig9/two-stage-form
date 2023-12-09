@@ -72,7 +72,7 @@ export class StepOneComponent implements OnInit {
       email: this.form.get('email')?.value,
       age: this.form.get('age')?.value,
       companyName: this.personDetailsObject ? this.personDetailsObject.companyName : '',
-      numberOfEmployees: this.personDetailsObject ? this.personDetailsObject.numberOfEmployees :0,
+      numberOfEmployees: this.personDetailsObject && this.personDetailsObject?.numberOfEmployees  ? this.personDetailsObject.numberOfEmployees : null,
       domain: this.personDetailsObject ? this.personDetailsObject.domain : []
     };
     
